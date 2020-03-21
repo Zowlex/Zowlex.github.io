@@ -257,7 +257,7 @@ pygame.quit()
 ```
 Final Result of a random config:
 
-<img src="https://github.com/Zowlex/Python-projects/blob/master/gameoflife/screenshots/gol.gif">
+<img src="https://raw.githubusercontent.com/Zowlex/Python-projects/master/gameoflife/screenshots/gol.gif">
 
 ## Conclusion
 I had so fun working on this project and I hope it helps you because at first place I did not find a good python implementation of this project.
