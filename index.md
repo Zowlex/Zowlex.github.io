@@ -1,5 +1,5 @@
 
-<img src="images/bg_13.jpg" width="1000" height="500" />
+<img src="images/bg_13.jpg" width="2000" height="500" />
 
 # Welcome to my blog
 
