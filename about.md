@@ -5,7 +5,7 @@ Fares Lassoued, 23 yo from Tunisia. I'm a cs graduate with interest in Data scie
 You can find me on:
 
 
-- ![Linekedin](https://www.linkedin.com/in/fareslassoued/)
-- ![Github](https://github.com/Zowlex)
-- ![Kaggle](https://www.kaggle.com/zowlex)
-- ![Quora](https://www.quora.com/profile/Fares-Lassoued)
+  - ![Linekedin](https://www.linkedin.com/in/fareslassoued/)
+  - ![Github](https://github.com/Zowlex)
+  - ![Kaggle](https://www.kaggle.com/zowlex)
+  - ![Quora](https://www.quora.com/profile/Fares-Lassoued)
