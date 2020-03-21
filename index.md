@@ -1,7 +1,7 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
 
-![Image of fast.ai logo](images/logo.png)
+<img src="images/bg_13.jpg" width="1000" height="500" />
 
-## This is a title
+# Welcome to my blog
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+Join me through my journey towards a better version of me, you and humanity. I'll share my experiences, thoughts and tutorials in the topics that interest me. I decided to start this blog because I truly believe in Prof.Richard Feynmann's quote:
+> If you cannot explain something in simple terms, you do not understand it.
