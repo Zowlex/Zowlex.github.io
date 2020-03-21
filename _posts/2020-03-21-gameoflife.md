@@ -5,7 +5,8 @@ This small project represents the python Implementation of *John Conways'* game 
 
 Project repo: [Game Of Life](https://github.com/Zowlex/Python-projects)
 
-1.TOC{:toc}
+1.TOC
+{:toc}
 
 ## What is the game of life 
  
@@ -257,6 +258,7 @@ Final Result of a random config:
 
 ## Conclusion
 I had so fun working on this project and I hope it helps you because at first place I did not find a good python implementation of this project.
+ 
  ### Next Steps:
    - Add drawing functionality by mouse, so you can choose easily the starting config
    - I think of optimizing the game by using numpy instead of grid 
