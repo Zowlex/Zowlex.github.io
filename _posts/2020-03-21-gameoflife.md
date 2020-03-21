@@ -18,7 +18,7 @@ Table of contents:
   3. Any live cell with more than three live neighbours dies, as if by overpopulation.
   4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
-Starting from these simple rules we can create starting configurations that lead to complex systems and shapes like [oscillators](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_pulsar.gif), [spaceships](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Animated_Hwss.gif) and [turing machines](https://en.wikipedia.org/wiki/Hashlife#/media/File:Turing_Machine_in_Golly.png)
+Out of these simple rules we can create starting configurations that lead to complex systems and shapes like [oscillators](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_pulsar.gif), [spaceships](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Animated_Hwss.gif) and even [turing machines](https://en.wikipedia.org/wiki/Hashlife#/media/File:Turing_Machine_in_Golly.png)
 
 
 ## Motivation
