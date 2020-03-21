@@ -31,7 +31,7 @@ I was glad that I stumbled upon a great talk on youtube called [The Art of Code]
 
 At this point I have no idea how to implement this graphically so I started first by creating a Grid class which represents our infinte 2d space. This grid is in fact a 2d array which translates to a nested list in python. our grid of length w and width h is initialized by w*h zeros when called.
 
-{% include info.html text="N.B 0 means that the cell is dead and 1 is alive" %}
+{% include info.html text="N.B: 0 means that the cell is dead and 1 is alive" %}
 
 class Grid:
 ```python
