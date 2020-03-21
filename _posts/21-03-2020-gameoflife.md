@@ -14,6 +14,7 @@ Project repo: [Game Of Life](https://github.com/Zowlex/Python-projects)
   2. Any live cell with two or three live neighbours lives on to the next generation.
   3. Any live cell with more than three live neighbours dies, as if by overpopulation.
   4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
 Starting from these simple rules we can create starting configurations that lead to complex systems and shapes like [oscillators](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Game_of_life_pulsar.gif), [spaceships](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Animated_Hwss.gif) and [turing machines](https://en.wikipedia.org/wiki/Hashlife#/media/File:Turing_Machine_in_Golly.png)
 
 
@@ -23,9 +24,9 @@ I was glad that I stumbled upon a great talk on youtube called [The Art of Code]
 
 ## Implementation
 
-### Engine
+ ### Engine
 
-At this point I have no idea how to implement this graphically so I started first by creating a Grid class which represents our infinte 2d space. This grid is in fact a 2d array which translates to a nested list in python. our grid of weight w and height h is initialized by w*h zeros when called.
+At this point I have no idea how to implement this graphically so I started first by creating a Grid class which represents our infinte 2d space. This grid is in fact a 2d array which translates to a nested list in python. our grid of length w and width h is initialized by w*h zeros when called.
 
 {% include info.html text="N.B 0 means that the cell is dead and 1 is alive" %}
 
@@ -36,7 +37,7 @@ import random
 class Grid(list):
     def __init__(self, w, h):
         """
-        initializes a grid of zeros with weight w and height h 
+        initializes a grid of zeros with length w and width h 
         """
         self.w = w
         self.h = h
@@ -106,10 +107,11 @@ Output:
  4 which is the sum of neighbor alive cells
 
 Before thinking about gui we have to try it on terminal and see if everything works fine. We start by making a grid and choose starting configuration, get each cell's state and update it in next_grid, after looping through all cells we print the updated version (next_grid) and each loop through the grid represnts a new generation of cells.
+
 test.py
 ```python
 from grid import Grid
-import time
+
 
 grid = Grid(3,5)
 
@@ -150,6 +152,112 @@ Output: this is the representation of an oscillator
  
 ### Interface
 
+For the gui I decided to use pygame for its simplicity and powerful functionalities, we start by defining some global variables.
+```python
+# Define some colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+
+# This sets the WIDTH and HEIGHT of each grid location
+SQUARE = 20
+
+# This sets the margin between each cell
+MARGIN = 2
+
+#Screen resolution
+w = 700
+h = 500
+
+#calculate row_num, col_num from current resolution
+row_num = w//SQUARE
+col_num = h//SQUARE
+```
+Next define the draw method which represents our grid of zeros and ones by graphical squares of white color if dead and green color if alive:
+```python
+#def initialize grid
+def draw_grid(row_num, col_num, g):
+                # Draw the grid
+                for row in range(row_num):
+                    for column in range(col_num):
+                        color = WHITE
+                        pygame.draw.rect(screen,
+                                            color,
+                                            [(MARGIN + SQUARE) * row + MARGIN,
+                                            (MARGIN + SQUARE) * column + MARGIN,
+                                            SQUARE,
+                                            SQUARE])
+                        if g[row][column] == 1:
+                            pygame.draw.rect(screen,
+                                    GREEN,
+                                    [(MARGIN + SQUARE) * row + MARGIN,
+                                    (MARGIN + SQUARE) * column + MARGIN,
+                                    SQUARE,
+                                    SQUARE])
+                pygame.display.flip()
+```
 
 
+Then we have to create a window of size w,h and draw initial grid
+```python
+def create_window(w, h):
+    # Set the HEIGHT and WIDTH of the screen
+    screen = pygame.display.set_mode([w,h])
+    # Set title of screen
+    pygame.display.set_caption("John Conway's game of life")
+    return screen
 
+#create window of size 700px by 500px
+screen = create_window(w, h)
+
+#draw initial grid
+draw_grid(row_num, col_num, grid)  
+```
+The final step is defining the main loop to keep the game running and see some **magic patterns**, once we press the space key we apply the same rules on the grid like we did on the first prototype of the game and draw each new generation of cells to the screen of our window.
+```python
+# -------- Main Program Loop -----------
+while not done:
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked close
+            done = True  # Flag that we are done so we exit this loop
+        elif event.type == pygame.KEYDOWN: # Game starts
+            if event.key == K_SPACE:
+                print('space key pressed')
+                x = 0
+                while True:
+                    next_grid = Grid(row_num, col_num)
+                    for row in range(row_num):
+                        for col in range(col_num):
+
+                            state = grid[row][col]#current grid state 0 or 1
+                            
+                            neighbors = grid.alive_neighbors(row,col)#current grid alive neighbors
+                            
+                            if state == 1 and (neighbors<2 or neighbors>3):
+                                next_grid[row][col] = 0
+                            elif state == 0 and neighbors == 3: 
+                                next_grid[row][col] = 1
+                            else:
+                                next_grid[row][col] = state
+                                
+                    draw_grid(row_num, col_num, next_grid)
+                    grid = next_grid
+                    x+=1
+                    print('generation:',x)
+                    # Limit to x frames per second
+                    clock.tick(x)
+
+# Be IDLE friendly. If you forget this line, the program will 'hang'
+# on exit.
+pygame.quit()
+```
+Final Result of a random config:
+<p align='center'> <img src="https://github.com/Zowlex/Python-projects/blob/master/gameoflife/screenshots/gol.gif"> </p>
+
+## Conclusion
+I had so fun working on this project and I hope it helps you because at first place I did not find a good python implementation of this project.
+ ### Next Steps:
+   - Add drawing functionality by mouse, so you can choose easily the starting config
+   - I think of optimizing the game by using numpy instead of grid 
+   - Make an interactive web app of it using flask and deploy it
