@@ -5,7 +5,7 @@ This small project represents the python Implementation of *John Conways'* game 
 
 Project repo: [Game Of Life](https://github.com/Zowlex/Python-projects)
 
-1.TOC
+1. TOC
 {:toc}
 
 ## What is the game of life 
