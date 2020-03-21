@@ -1,4 +1,4 @@
-# Welcome to my blog
+## Welcome to my blog
 
 ![img](images/bg_13.jpg)
 
