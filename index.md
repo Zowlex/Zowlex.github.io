@@ -1,4 +1,4 @@
-## Welcome to my blog
+## Home
 
 ![img](images/bg_13.jpg)
 
