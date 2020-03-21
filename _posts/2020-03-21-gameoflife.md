@@ -23,7 +23,7 @@ Out of these simple rules we can create starting configurations that lead to com
 
 ## Motivation
 
-I was glad that I stumbled upon a great talk on youtube called [The Art of Code](https://www.youtube.com/watch?v=gdSlcxxYAA8). Dylan Beattie is aprogrammer and musician talked about different beautiful artistic moments of coding and what coders have achieved from writing mesmerizing [quines](https://en.wikipedia.org/wiki/Quine_(computing)) to coming up with weird but funny programming languages like [Rockstar programming language](https://codewithrockstar.com/) but what has really caught my attention is talking about the game of life which made my jaw drop and let me think very deeply about its capabilities. At this moment I knew nothing about it and suddenly had the urge to implement it in my favourite programming language (python)
+I was glad that I stumbled upon a great talk on youtube called [The Art of Code](https://www.youtube.com/watch?v=gdSlcxxYAA8) which I highly recommend watching it. Dylan Beattie is a programmer and musician talked about different beautiful artistic moments of coding and what coders have achieved from writing mesmerizing [quines](https://en.wikipedia.org/wiki/Quine_(computing)) to coming up with weird but funny programming languages like [Rockstar programming language](https://codewithrockstar.com/) but what has really caught my attention is talking about the game of life which made my jaw drop and let me think very deeply about its capabilities. At this moment I knew nothing about it and suddenly had the urge to implement it in my favourite programming language (python)
 
 ## Implementation
 
