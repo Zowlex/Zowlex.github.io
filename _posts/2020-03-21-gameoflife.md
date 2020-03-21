@@ -5,6 +5,8 @@ This small project represents the python Implementation of *John Conways'* game 
 
 Project repo: [Game Of Life](https://github.com/Zowlex/Python-projects)
 
+Table of contents:
+
 1. TOC
 {:toc}
 
@@ -25,7 +27,7 @@ I was glad that I stumbled upon a great talk on youtube called [The Art of Code]
 
 ## Implementation
 
- ### Engine
+### Engine
 
 At this point I have no idea how to implement this graphically so I started first by creating a Grid class which represents our infinte 2d space. This grid is in fact a 2d array which translates to a nested list in python. our grid of length w and width h is initialized by w*h zeros when called.
 
