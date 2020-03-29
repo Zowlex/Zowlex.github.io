@@ -263,6 +263,6 @@ Final Result of a random config:
 I had so fun working on this project and I hope it helps you because at first place I did not find a good python implementation of this project.
  
 ### Next Steps:
-   - Add drawing functionality by mouse, so you can choose easily the starting config
+   - ~~Add drawing functionality by mouse, so you can choose easily the starting config~~ (done)
    - I think of optimizing the game by using numpy instead of grid 
    - Make an interactive web app of it using flask and deploy it
