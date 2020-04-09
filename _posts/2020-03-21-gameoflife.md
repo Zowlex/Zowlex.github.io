@@ -1,5 +1,5 @@
 # John Conways' game of life in python
-<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif"> </p>
+<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif" id='top'> </p>
 
 This small project represents the python Implementation of *John Conways'* game of life, if you don't know what I'm talking about stick with me, I'll explain everything from idea to implementation.
 
@@ -264,5 +264,6 @@ I had so fun working on this project and I hope it helps you because at first pl
  
 ### Next Steps:
    - ~~Add drawing functionality by mouse, so you can choose easily the starting config~~ (done)
-   - I think of optimizing the game by using numpy instead of grid 
+   - ~~I think of optimizing the game by using numpy instead of grid ~~
    - Make an interactive web app of it using flask and deploy it
+<p align='center'><a href='#top'>Go back up</a></p>
