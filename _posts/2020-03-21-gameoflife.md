@@ -264,6 +264,6 @@ I had so fun working on this project and I hope it helps you because at first pl
  
 ### Next Steps:
    - ~~Add drawing functionality by mouse, so you can choose easily the starting config~~ (done)
-   - ~~I think of optimizing the game by using numpy instead of grid ~~
+   - ~~I think of optimizing the game by using numpy instead of grid~~ (done)
    - Make an interactive web app of it using flask and deploy it
 <p align='center'><a href='#top'>Go back up</a></p>
