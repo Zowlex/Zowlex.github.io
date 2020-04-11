@@ -1,8 +1,5 @@
-# Home
-
-## Welcome to my blog!
-
-![img](images/bg_13.jpg)
-
-Join me through my journey towards a better version of me, you and humanity. I'll share my experiences, thoughts and tutorials in the topics that interest me. I decided to start this blog because I truly believe in Prof.Richard Feynmann's quote:
-> If you cannot explain something in simple terms, you do not understand it.
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to http://fareslassoued.ml/Blog/</title>
+<meta http-equiv="refresh" content="0; URL=http://fareslassoued.ml/Blog/">
+<link rel="canonical" href="http://fareslassoued.ml/Blog/">
